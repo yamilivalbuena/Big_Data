@@ -1,5 +1,5 @@
 # Designing Data-Intensive Applications 
-This is a summary of chapters 2 of "Designing Data-Intensive Applications" by Martin Kleppmann
+This is a summary of chapter 3 of "Designing Data-Intensive Applications" by Martin Kleppmann
 
 ### 1. What are the two things a database needs to do on the most fundamental level?
 When you give it some data, it should store the data, and when you ask it again later, it should give the
