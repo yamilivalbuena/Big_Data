@@ -93,6 +93,18 @@ the data structures.
 there is not much point in generating code, since there is no compile-time type
 checker to satisfy.
 
+### 12. Is it possible to migrate data into a new schema?
+Rewriting (migrating) data into a new schema is certainly possible, but it’s an expensive
+thing to do on a large dataset, so most databases avoid it if possible. Most relational
+databases allow simple schema changes, such as adding a new column with a
+null default value, without rewriting existing data.
+
+### 13. What is the basis of a microservices architecture?
+Decomposing a large application into smaller services by area of functionality, such that one service
+makes a request to another when it requires some functionality or data from that
+other service. A key design goal of a service-oriented/microservices architecture is to make the
+application easier to change and maintain by making services independently deployable
+and evolvable.
 
 
 
