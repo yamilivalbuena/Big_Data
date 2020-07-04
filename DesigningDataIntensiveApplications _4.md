@@ -106,7 +106,16 @@ other service. A key design goal of a service-oriented/microservices architectur
 application easier to change and maintain by making services independently deployable
 and evolvable.
 
+### 14. What is one of the most important differences between SOAP and REST?
+REST is not a protocol, but rather a design philosophy that builds upon the principles
+of HTTP. By contrast, SOAP is an XML-based protocol for making network API requests.vii
+Although it is most commonly used over HTTP, it aims to be independent from
+HTTP and avoids using most HTTP features.
 
+### 15. How do message brokers work?
+One process sends a message to a named
+queue or topic, and the broker ensures that the message is delivered to one or more
+consumers of or subscribers to that queue or topic.
 
 
 
