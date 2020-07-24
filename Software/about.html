@@ -1,0 +1,23 @@
+{% extends "app1/base.html"%}
+{% load static %}
+{% block content%}
+
+<style>
+  img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+</style>
+
+  <main role="main" class="container">
+    <body style="background-color: #d84040;" >
+          <img src="{% static 'app1/icon.png'%}" width="500" class="center">
+          <h1 style="text-align: center; color: rgba(255, 255, 255, 0.925); font-size: 100px;"> F.U.T.V.</h1>
+          <h1 style="text-align: center; color: rgba(255, 255, 255, 0.925); font-size: 30px; font-style: italic; opacity: 0.7;"> Things happen after a ride</h1>
+    </body>
+  </main>
+
+    
+{% endblock content %}
+

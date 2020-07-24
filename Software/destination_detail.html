@@ -1,0 +1,31 @@
+{% extends "app1/base.html"%}
+{% block content%}
+    
+<h1>List of available destinations</h1>
+
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <h4>Municipalities</h4>
+            <h2 class="article-title">{{ object.name }}</h2>
+            <br>
+            <h4>Dates available</h4>
+            <p><small class="article">{{ object.schedule }}</small></p>
+            <br>
+            {% if object.admin == user %}
+                <div>
+                    <a class = "btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'destination-update' object.id %}">Update</a>
+                    <a class = "btn btn-danger btn-sm mt-1 mb-1" href="{% url 'destination-delete' object.id %}">Delete</a>
+                    <a class = "btn btn-danger btn-sm mt-1 mb-1" href="{% url 'destination-create' %}">Add New destination</a>
+                </div>
+                
+            {% endif %}
+            <h4>Times available</h4>
+            <!--
+                {% for time in destination.time %}
+            <p><small class="article-content">{{ time }}</small></p> 
+            {% endfor %}-->
+        </div>
+    </article>
+
+{% endblock content %}
