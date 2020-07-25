@@ -71,6 +71,10 @@ and writes.
 * No more data than necessary should be moved between nodes, to make rebalancing
 fast and to minimize the network and disk I/O load.
 
+### 12. What is a logical partition?
+A logical partition (LPAR) is a subset of a computer's hardware resources, virtualized as a separate computer. In effect, a physical machine can be partitioned into multiple logical partitions, each hosting a separate instance of an operating system.
+
+https://en.wikipedia.org/wiki/Logical_partition
 
 
 
