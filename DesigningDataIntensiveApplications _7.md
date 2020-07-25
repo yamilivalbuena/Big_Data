@@ -38,6 +38,35 @@ TCP (Transmission Control Protocol) is a standard that defines how to establish 
 
 https://searchnetworking.techtarget.com/definition/TCP#:~:text=TCP%20(Transmission%20Control%20Protocol)%20is,of%20data%20to%20each%20other.
  
+### 7. Why have many distributed datastores abandoned multi-object transactions?
+Many distributed datastores have abandoned multi-object transactions because they
+are difficult to implement across partitions, and they can get in the way in some scenarios
+where very high availability or performance is required.
+
+### 8. What does serializable isolation mean?
+Serializable isolation means that the database guarantees that transactions have the same effect as
+if they ran serially (i.e., one at a time, without any concurrency).
+
+### 9. What are the two guarantees offered by read committed?
+1. When reading from the database, you will only see data that has been committed
+(no dirty reads).
+2. When writing to the database, you will only overwrite data that has been committed
+(no dirty writes).
+
+### 10. What is the most common way databases prevent dirty writes in?
+Most commonly, databases prevent dirty writes by using row-level locks: when a
+transaction wants to modify a particular object (row or document), it must first
+acquire a lock on that object. It must then hold that lock until the transaction is committed
+or aborted.
+
+### 11. What does snapshot isolation refer to?
+Snapshot isolation is the most common solution to this problem. The idea is that
+each transaction reads from a consistent snapshot of the database—that is, the transaction
+sees all the data that was committed in the database at the start of the transaction.
+Even if the data is subsequently changed by another transaction, each
+transaction sees only the old data from that particular point in time.
+
+
 
 
 
